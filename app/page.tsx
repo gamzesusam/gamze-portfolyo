@@ -83,13 +83,10 @@ export default function Home() {
           </div>
 
           <div className="p-6 rounded-xl bg-white border border-[#E6E0D8] shadow-sm">
-            <span className="text-xs font-bold text-[#800020] uppercase tracking-wide">Kurumsal Staj Deneyimi</span>
-            <h3 className="text-lg font-bold text-[#1B1B1B] mt-1">EÜAŞ (Elektrik Üretim A.Ş.)</h3>
-            <p className="text-sm font-medium text-[#5A5047]">Bilişim Teknolojileri Stajyeri (12. Sınıf Dönemi)</p>
-            <p className="mt-3 text-sm text-[#4A423A] leading-relaxed">
-              Kurum içi teknik altyapı desteği, veri akışları ve operasyonel süreçlerin takibi.
-            </p>
-          </div>
+           <span className="text-xs font-bold text-[#800020] uppercase tracking-wide">Lise Stajı</span>
+           <h3 className="text-lg font-bold text-[#1B1B1B] mt-1">EÜAŞ (Elektrik Üretim A.Ş.)</h3>
+          <p className="text-sm font-medium text-[#5A5047]">Stajyer (12. Sınıf Zorunlu Stajı)</p>
+         </div>
 
           <div className="p-6 rounded-xl bg-white border border-[#E6E0D8] shadow-sm">
             <span className="text-xs font-bold text-[#800020] uppercase tracking-wide">Ortaöğretim</span>
