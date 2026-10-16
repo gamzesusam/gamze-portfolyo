@@ -1,258 +1,264 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FFF9F2] text-[#3a2a2a]">
-      {/* Navbar */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-[#FFF9F2]/90 backdrop-blur border-b border-[#F3E6D5]">
-        <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
-          <span className="font-bold text-lg text-[#800020]">Gamze Susam</span>
-          <div className="flex gap-6 text-sm font-medium text-[#800020]/80">
-            <a href="#hakkimda" className="hover:text-[#D45060]">Hakkımda</a>
-            <a href="#egitim" className="hover:text-[#D45060]">Eğitim</a>
-            <a href="#yetenekler" className="hover:text-[#D45060]">Yetenekler</a>
-            <a href="#projeler" className="hover:text-[#D45060]">Projeler</a>
-            <a href="#iletisim" className="hover:text-[#D45060]">İletişim</a>
-          </div>
+    <main className="min-h-screen bg-[#FDFBF7] text-[#2D2D2D] selection:bg-[#800020] selection:text-white">
+      {/* 1. ÜST NAVİGASYON (Çok Sayfalı / Sayfa İçi Uyumlu Menü) */}
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-[#FDFBF7]/90 border-b border-[#E6E0D8]">
+        <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+          <Link href="/" className="font-bold text-lg text-[#800020] tracking-tight hover:opacity-80 transition">
+            Gamze Susam
+          </Link>
+          <nav className="flex items-center gap-6 text-sm font-medium text-[#5A5047]">
+            <a href="#hakkimda" className="hover:text-[#800020] transition">Hakkımda</a>
+            <a href="#deneyim-egitim" className="hover:text-[#800020] transition">Eğitim & Staj</a>
+            <a href="#projeler" className="hover:text-[#800020] transition">Projeler</a>
+            <a href="#sosyal-sorumluluk" className="hover:text-[#800020] transition">Sosyal Sorumluluk</a>
+            <a href="#iletisim" className="hover:text-[#800020] transition">İletişim</a>
+          </nav>
         </div>
-      </nav>
+      </header>
 
-      {/* Hero */}
-      <section
-        id="hero"
-        className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 bg-gradient-to-b from-[#FFF9F2] to-[#F3E6D5]"
-      >
-        <p className="text-[#D45060] font-medium mb-2">Merhaba, ben</p>
-        <h1 className="text-4xl sm:text-6xl font-bold mb-4 text-[#800020]">
-          Gamze Susam
+      {/* 2. GİRİŞ (HERO) BÖLÜMÜ - Profesyonel ve Yetkin Başlangıç */}
+      <section className="max-w-4xl mx-auto px-6 pt-24 pb-16 text-left">
+        <span className="inline-block py-1 px-3 mb-6 text-xs font-semibold tracking-wider text-[#800020] uppercase bg-[#800020]/10 rounded-full">
+          Büyük Veri Analistliği & Portfolyo
+        </span>
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#1B1B1B] leading-tight mb-6">
+          Veriden Değer Üreten, <br />
+          <span className="text-[#800020]">Analitik ve Tahmine Dayalı</span> Çözümler.
         </h1>
-        <p className="text-xl text-[#3a2a2a]/80 mb-8">Büyük Veri Analisti</p>
-        <p className="max-w-xl text-[#3a2a2a]/70 mb-10">
-          Veriyi anlamlandırmayı, sayılar arasındaki hikayeyi bulmayı ve
-          teknolojiyle çözümler üretmeyi seviyorum.
+        <p className="text-lg md:text-xl text-[#5A5047] leading-relaxed max-w-2xl mb-8">
+          Büyük veri analitiği, makine öğrenmesi modellemeleri ve interaktif veri hikâyeciliği (scrollytelling) üzerine odaklanan projeler geliştiriyorum.
         </p>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <a
             href="#projeler"
-            className="px-6 py-3 bg-[#D45060] text-white rounded-full font-medium hover:bg-[#800020] transition"
+            className="px-6 py-3 rounded-lg bg-[#800020] text-white font-medium text-sm hover:bg-[#600018] shadow-sm transition"
           >
-            Projelerimi Gör
+            Projelerimi İncele
           </a>
           <a
-            href="#iletisim"
-            className="px-6 py-3 border border-[#D45060] text-[#800020] rounded-full font-medium hover:bg-[#F3E6D5] transition"
+            href="https://maasini-en-cok-hangi-faktor-etkiliy.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-lg border border-[#D1C7BD] bg-white font-medium text-sm text-[#2D2D2D] hover:bg-[#F5F0EB] transition flex items-center gap-2"
           >
-            İletişime Geç
+            <span>Canlı Veri Hikâyesi</span>
+            <span className="text-xs">↗</span>
           </a>
         </div>
       </section>
 
-      {/* Hakkımda */}
-      <section id="hakkimda" className="max-w-3xl mx-auto px-6 py-24">
-        <h2 className="text-3xl font-bold mb-8 text-[#800020]">Hakkımda.</h2>
-        <p className="leading-relaxed mb-4 text-[#3a2a2a]/90">
-          Lisede <strong>Bilişim Teknolojileri</strong> bölümünü okuyarak bilgisayar
-          alanında temel eğitimimi aldım. Bu süreçte <strong>HTML</strong>,{" "}
-          <strong>CSS</strong> ve <strong>JavaScript</strong> ile web geliştirme
-          üzerine ilk projelerimi hazırladım.
-        </p>
-        <p className="leading-relaxed mb-4 text-[#3a2a2a]/90">
-          Şu anda <strong>Manisa Celal Bayar Üniversitesi</strong>'nde eğitimime
-          devam ediyor, <strong>C#</strong>, <strong>SQL</strong> ve{" "}
-          <strong>Python</strong> dillerini öğrenerek veri analizi ve yazılım
-          geliştirme alanında kendimi geliştiriyorum.
-        </p>
-        <p className="leading-relaxed text-[#3a2a2a]/90">
-          Amacım, veriyi doğru şekilde işleyip anlamlı sonuçlar çıkaran{" "}
-          <strong>Büyük Veri Analisti</strong> olarak projelerde yer almak.
-        </p>
-      </section>
-
-      {/* Eğitim */}
-      <section id="egitim" className="bg-[#F3E6D5] py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-10 text-[#800020]">Eğitim.</h2>
-          <div className="space-y-6">
-            <div className="bg-[#FFF9F2] rounded-2xl p-6 border border-[#D45060]/20">
-              <h3 className="text-lg font-semibold text-[#800020]">
-                Manisa Celal Bayar Üniversitesi
-              </h3>
-              <p className="text-sm text-[#D45060] mb-2">
-                Büyük Veri Analitiği · Devam Ediyor
-              </p>
-              <p className="text-[#3a2a2a]/80 text-sm">
-                C#, SQL ve Python dersleri ile veri analizi, veritabanı yönetimi
-                ve yazılım geliştirme üzerine eğitim alıyorum.
-              </p>
-            </div>
-            <div className="bg-[#FFF9F2] rounded-2xl p-6 border border-[#D45060]/20">
-              <h3 className="text-lg font-semibold text-[#800020]">
-                Bilişim Teknolojileri (Lise)
-              </h3>
-              <p className="text-sm text-[#D45060] mb-2">Mezun</p>
-              <p className="text-[#3a2a2a]/80 text-sm">
-                HTML, CSS ve JavaScript ile temel web geliştirme eğitimi aldım,
-                iki web sitesi projesi geliştirdim.
-              </p>
-            </div>
-          </div>
+      {/* 3. HAKKIMDA BÖLÜMÜ */}
+      <section id="hakkimda" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#E6E0D8]">
+        <h2 className="text-2xl font-bold mb-6 text-[#800020]">Hakkımda.</h2>
+        <div className="space-y-4 text-base md:text-lg leading-relaxed text-[#4A423A]">
+          <p>
+            Lise eğitimimi <strong>Özcan Sabancı Mesleki ve Teknik Anadolu Lisesi</strong> bünyesinde <strong>Bilişim Teknolojileri</strong> alanında tamamlayarak bilgisayar bilimleri ve yazılım alanındaki temelimi attım. Bu süreçte <strong>HTML</strong>, <strong>CSS</strong> ve <strong>JavaScript</strong> ile modern web geliştirme üzerine ilk projelerimi hayata geçirdim.
+          </p>
+          <p>
+            12. sınıf döneminde <strong>EÜAŞ (Elektrik Üretim A.Ş.)</strong> bünyesinde stajyer olarak görev alarak kurumsal iş kültürü, teknik altyapı ve operasyonel süreçler konusunda doğrudan deneyim edindim.
+          </p>
+          <p>
+            Şu anda <strong>Manisa Celal Bayar Üniversitesi</strong> Teknik Bilimler MYO İstatistik Bölümü, <strong>Büyük Veri Analistliği</strong> programında eğitimime devam ediyorum. Akademik çalışmalarımda <strong>Python</strong>, <strong>SQL</strong> ve <strong>C#</strong> teknolojilerini kullanarak büyük veri analitiği, makine öğrenmesi algoritmaları ve veri görselleştirme odaklı projeler yürütüyorum.
+          </p>
+          <p>
+            Amacım; karmaşık veri yığınlarını işleyerek karar alma mekanizmalarını güçlendiren, aksiyona dönüştürülebilir anlamlı içgörüler üreten yetkin bir <strong>Büyük Veri Analisti</strong> olarak sektöre değer katmaktır.
+          </p>
         </div>
       </section>
 
-      {/* Yetenekler */}
-      <section id="yetenekler" className="max-w-3xl mx-auto px-6 py-24">
-        <h2 className="text-3xl font-bold mb-2 text-[#800020]">Yetenekler.</h2>
-        <p className="text-[#3a2a2a]/60 mb-10">Kullandığım diller ve araçlar</p>
-        <div className="grid sm:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-3 text-[#D45060]">
-              Web Geliştirme
-            </h3>
-            <p className="text-[#3a2a2a]/80">HTML · CSS · JavaScript</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-3 text-[#D45060]">
-              Programlama & Veri
-            </h3>
-            <p className="text-[#3a2a2a]/80">C# · SQL · Python</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-3 text-[#D45060]">
-              Veri Analizi
-            </h3>
-            <p className="text-[#3a2a2a]/80">
-              Excel · Veri Görselleştirme · İstatistiksel Analiz
+      {/* 4. EĞİTİM & DENEYİM KRONOLOJİSİ */}
+      <section id="deneyim-egitim" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#E6E0D8]">
+        <h2 className="text-2xl font-bold mb-8 text-[#800020]">Eğitim ve Deneyim Geçmişi</h2>
+        <div className="space-y-8">
+          <div className="p-6 rounded-xl bg-white border border-[#E6E0D8] shadow-sm">
+            <span className="text-xs font-bold text-[#800020] uppercase tracking-wide">Önlisans Eğitimi</span>
+            <h3 className="text-lg font-bold text-[#1B1B1B] mt-1">Manisa Celal Bayar Üniversitesi</h3>
+            <p className="text-sm font-medium text-[#5A5047]">Teknik Bilimler MYO — İstatistik / Büyük Veri Analistliği (2025 – Günümüz)</p>
+            <p className="mt-3 text-sm text-[#4A423A] leading-relaxed">
+              Veri tabanı mimarisi (SQL), Python ile veri analizi ve makine öğrenmesi modelleme teknikleri üzerine yoğunlaşan akademik müfredat.
             </p>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-3 text-[#D45060]">
-              Araçlar
-            </h3>
-            <p className="text-[#3a2a2a]/80">Git · VS Code · Visual Studio</p>
+
+          <div className="p-6 rounded-xl bg-white border border-[#E6E0D8] shadow-sm">
+            <span className="text-xs font-bold text-[#800020] uppercase tracking-wide">Kurumsal Staj Deneyimi</span>
+            <h3 className="text-lg font-bold text-[#1B1B1B] mt-1">EÜAŞ (Elektrik Üretim A.Ş.)</h3>
+            <p className="text-sm font-medium text-[#5A5047]">Bilişim Teknolojileri Stajyeri (12. Sınıf Dönemi)</p>
+            <p className="mt-3 text-sm text-[#4A423A] leading-relaxed">
+              Kurum içi teknik altyapı desteği, veri akışları ve operasyonel süreçlerin takibi.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-xl bg-white border border-[#E6E0D8] shadow-sm">
+            <span className="text-xs font-bold text-[#800020] uppercase tracking-wide">Ortaöğretim</span>
+            <h3 className="text-lg font-bold text-[#1B1B1B] mt-1">Özcan Sabancı Mesleki ve Teknik Anadolu Lisesi</h3>
+            <p className="text-sm font-medium text-[#5A5047]">Bilişim Teknolojileri Alanı — Web Programcılığı</p>
+            <p className="mt-3 text-sm text-[#4A423A] leading-relaxed">
+              Web tasarımı ve kodlamanın temelleri (HTML, CSS, JavaScript) ve veritabanı yönetim sistemleri eğitimi.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Projeler */}
-      <section id="projeler" className="bg-[#F3E6D5] py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-2 text-[#800020]">Projeler.</h2>
-          <p className="text-[#3a2a2a]/60 mb-10">Geliştirdiğim bazı çalışmalar</p>
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div className="bg-[#FFF9F2] rounded-2xl p-6 border border-transparent hover:border-[#D45060] transition">
-              <h3 className="text-xl font-semibold mb-2 text-[#800020]">
-                Maaş Tahminleme Projesi
+      {/* 5. GERÇEK PROJELER BÖLÜMÜ */}
+      <section id="projeler" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#E6E0D8]">
+        <h2 className="text-2xl font-bold mb-8 text-[#800020]">Öne Çıkan Gerçek Projeler</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          {/* Proje 1: Canlı Veri Hikayesi */}
+          <div className="p-6 rounded-xl bg-white border border-[#E6E0D8] shadow-sm flex flex-col justify-between hover:border-[#800020] transition">
+            <div>
+              <span className="text-xs font-semibold text-[#800020] uppercase">Scrollytelling & Veri Gazeteciliği</span>
+              <h3 className="text-lg font-bold text-[#1B1B1B] mt-1 mb-2">
+                Küresel Lokasyon ve Şirket Ölçeği Maaş Analizi
               </h3>
-              <p className="text-[#3a2a2a]/80 mb-3 text-sm">
-                Farklı mesleklere ait değişkenler üzerinden maaş tahmini yapan
-                bir veri analizi projesi.
+              <p className="text-sm text-[#5A5047] leading-relaxed mb-4">
+                Kaggle üzerindeki 250.000 çalışan verisi incelenerek eğitilen Random Forest modeliyle gelir uçurumunu belirleyen faktörlerin interaktif görselleştirmesi.
               </p>
-              <p className="text-xs text-[#D45060] font-medium">
-                Python · Veri Analizi
-              </p>
+              <div className="flex flex-wrap gap-2 text-xs font-medium text-[#5A5047] mb-4">
+                <span className="bg-[#F5F0EB] px-2.5 py-1 rounded">Next.js</span>
+                <span className="bg-[#F5F0EB] px-2.5 py-1 rounded">Random Forest</span>
+                <span className="bg-[#F5F0EB] px-2.5 py-1 rounded">Vercel</span>
+              </div>
             </div>
-            <div className="bg-[#FFF9F2] rounded-2xl p-6 border border-transparent hover:border-[#D45060] transition">
-              <h3 className="text-xl font-semibold mb-2 text-[#800020]">
-                Web Siteleri
-              </h3>
-              <p className="text-[#3a2a2a]/80 mb-3 text-sm">
-                Lise döneminde HTML, CSS ve JavaScript kullanarak geliştirdiğim
-                iki web sitesi projesi.
-              </p>
-              <p className="text-xs text-[#D45060] font-medium">
-                HTML · CSS · JavaScript
-              </p>
-            </div>
-            <div className="bg-[#FFF9F2] rounded-2xl p-6 border border-transparent hover:border-[#D45060] transition">
-              <h3 className="text-xl font-semibold mb-2 text-[#800020]">
-                Öğrenci Başarı Analizi
-              </h3>
-              <p className="text-[#3a2a2a]/80 mb-3 text-sm">
-                Ders çalışma süresi, devamsızlık ve sınav notları arasındaki
-                ilişkiyi inceleyen bir veri seti üzerinde analiz çalışması.
-              </p>
-              <p className="text-xs text-[#D45060] font-medium">
-                Python · SQL · Veri Görselleştirme
-              </p>
-            </div>
-            <div className="bg-[#FFF9F2] rounded-2xl p-6 border border-transparent hover:border-[#D45060] transition">
-              <h3 className="text-xl font-semibold mb-2 text-[#800020]">
-                Kütüphane Otomasyonu
-              </h3>
-              <p className="text-[#3a2a2a]/80 mb-3 text-sm">
-                Kitap ödünç alma/verme süreçlerini takip eden basit bir
-                veritabanı tabanlı otomasyon sistemi.
-              </p>
-              <p className="text-xs text-[#D45060] font-medium">
-                C# · SQL
-              </p>
-            </div>
+            <a
+              href="https://maasini-en-cok-hangi-faktor-etkiliy.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-bold text-[#800020] hover:underline inline-flex items-center gap-1"
+            >
+              Canlı Projeyi Ziyaret Et →
+            </a>
           </div>
+
+          {/* Proje 2: Otomasyon Riski */}
+          <div className="p-6 rounded-xl bg-white border border-[#E6E0D8] shadow-sm flex flex-col justify-between hover:border-[#800020] transition">
+            <div>
+              <span className="text-xs font-semibold text-[#800020] uppercase">Makine Öğrenmesi (15.001 x 20)</span>
+              <h3 className="text-lg font-bold text-[#1B1B1B] mt-1 mb-2">
+                Yapay Zekanın Mesleklere Etkisi ve İş Gücü Otomasyon Riski
+              </h3>
+              <p className="text-sm text-[#5A5047] leading-relaxed mb-4">
+                Mesleklerin yapay zeka adaptasyon oranı, beceri gereksinimi ve gelir trendleri kullanılarak tehdit düzeyinin (Düşük, Orta, Yüksek) çoklu modellerle sınıflandırılması.
+              </p>
+              <div className="flex flex-wrap gap-2 text-xs font-medium text-[#5A5047] mb-4">
+                <span className="bg-[#F5F0EB] px-2.5 py-1 rounded">XGBoost</span>
+                <span className="bg-[#F5F0EB] px-2.5 py-1 rounded">Random Forest</span>
+                <span className="bg-[#F5F0EB] px-2.5 py-1 rounded">Decision Tree</span>
+              </div>
+            </div>
+            <span className="text-xs font-semibold text-[#8297A6]">Araştırma & Modelleme Projesi</span>
+          </div>
+
+          {/* Proje 3: Hastane İş Yükü */}
+          <div className="p-6 rounded-xl bg-white border border-[#E6E0D8] shadow-sm flex flex-col justify-between hover:border-[#800020] transition">
+            <div>
+              <span className="text-xs font-semibold text-[#800020] uppercase">Sağlık Analitiği & Optimizasyon</span>
+              <h3 className="text-lg font-bold text-[#1B1B1B] mt-1 mb-2">
+                Hastane İş Yükü Tahmini ile Kaynak Planlama Ar-Ge'si
+              </h3>
+              <p className="text-sm text-[#5A5047] leading-relaxed mb-4">
+                Poliklinik randevuları, acil servis yoğunluğu ve yatak doluluk oranlarının modellenmesiyle sağlık personeli ve oda kapasitesi kaynak planlamasının optimize edilmesi.
+              </p>
+              <div className="flex flex-wrap gap-2 text-xs font-medium text-[#5A5047] mb-4">
+                <span className="bg-[#F5F0EB] px-2.5 py-1 rounded">Python</span>
+                <span className="bg-[#F5F0EB] px-2.5 py-1 rounded">Zaman Serisi</span>
+                <span className="bg-[#F5F0EB] px-2.5 py-1 rounded">Optimizasyon</span>
+              </div>
+            </div>
+            <span className="text-xs font-semibold text-[#8297A6]">Ar-Ge & Kapasite Tahmini</span>
+          </div>
+
+          {/* Proje 4: Lise Web Projeleri */}
+          <div className="p-6 rounded-xl bg-white border border-[#E6E0D8] shadow-sm flex flex-col justify-between hover:border-[#800020] transition">
+            <div>
+              <span className="text-xs font-semibold text-[#800020] uppercase">Web Geliştirme Temelleri</span>
+              <h3 className="text-lg font-bold text-[#1B1B1B] mt-1 mb-2">
+                Özcan Sabancı MTAL Web Arayüz Çalışmaları
+              </h3>
+              <p className="text-sm text-[#5A5047] leading-relaxed mb-4">
+                Bilişim Teknolojileri alan eğitiminde modern web standartlarına uygun arayüz kodlama, veri tabanı sorgu entegrasyonları ve dinamik web sayfası tasarımları.
+              </p>
+              <div className="flex flex-wrap gap-2 text-xs font-medium text-[#5A5047] mb-4">
+                <span className="bg-[#F5F0EB] px-2.5 py-1 rounded">HTML5/CSS3</span>
+                <span className="bg-[#F5F0EB] px-2.5 py-1 rounded">JavaScript</span>
+                <span className="bg-[#F5F0EB] px-2.5 py-1 rounded">SQL</span>
+              </div>
+            </div>
+            <span className="text-xs font-semibold text-[#8297A6]">Temel Bilişim Portfolyosu</span>
+          </div>
+
         </div>
       </section>
 
-      {/* Sertifikalar & Deneyim */}
-      <section id="deneyim" className="max-w-3xl mx-auto px-6 py-24">
-        <h2 className="text-3xl font-bold mb-10 text-[#800020]">
-          Sertifikalar & Deneyim.
-        </h2>
-        <ul className="space-y-4">
-          <li className="flex gap-3 items-start">
-            <span className="text-[#D45060] mt-1">●</span>
-            <span className="text-[#3a2a2a]/85">
-              Python ile Veri Analizine Giriş — Online Eğitim Sertifikası
-            </span>
-          </li>
-          <li className="flex gap-3 items-start">
-            <span className="text-[#D45060] mt-1">●</span>
-            <span className="text-[#3a2a2a]/85">
-              SQL Temelleri ve Veritabanı Yönetimi Sertifikası
-            </span>
-          </li>
-          <li className="flex gap-3 items-start">
-            <span className="text-[#D45060] mt-1">●</span>
-            <span className="text-[#3a2a2a]/85">
-              Üniversite bünyesinde düzenlenen veri analitiği atölyesine katılım
-            </span>
-          </li>
-        </ul>
-      </section>
-
-      {/* İletişim */}
-      <section id="iletisim" className="bg-[#F3E6D5] py-24 text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-4 text-[#800020]">İletişim.</h2>
-          <p className="text-[#3a2a2a]/70 mb-10">
-            Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsin.
+      {/* 6. SOSYAL SORUMLULUK PROJESİ (Grup Çalışması) */}
+      <section id="sosyal-sorumluluk" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#E6E0D8]">
+        <div className="p-8 rounded-2xl bg-white border border-[#E6E0D8] shadow-sm">
+          <span className="text-xs font-bold text-[#800020] uppercase tracking-wide">
+            MCBÜ Sosyal Sorumluluk Projeleri Sergisi (2025–2026 Bahar)
+          </span>
+          <h2 className="text-2xl font-bold text-[#1B1B1B] mt-2 mb-4">
+            Dijital Çağdan Önce Oyunlar: Çocuklar İçin Eğitici Atölye
+          </h2>
+          <p className="text-base text-[#4A423A] leading-relaxed mb-6">
+            Erken yaşta yoğun dijital ekran kullanımına alternatif oluşturmak amacıyla 5–6 yaş okul öncesi çocuklarla teknolojisiz oyunlar, renkli legolarla yön kodlama, geleneksel istop ile algoritma geliştirme ve yüzey gerilimi odaklı basit bilim deneyleri gerçekleştirilmiştir.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="mailto:gamze.serra@gmail.com"
-              className="px-6 py-3 bg-[#D45060] text-white rounded-full font-medium hover:bg-[#800020] transition"
-            >
-              Email Gönder
-            </a>
-            <a
-              href="https://www.linkedin.com/in/gamze-susam-2897a1403"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-[#D45060] text-[#800020] rounded-full font-medium hover:bg-[#FFF9F2] transition"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/gamzeserra3-wq"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-[#D45060] text-[#800020] rounded-full font-medium hover:bg-[#FFF9F2] transition"
-            >
-              GitHub
-            </a>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl bg-[#F8FAFC] border border-[#E6E0D8] mb-6">
+            <div>
+              <p className="text-xs text-[#8297A6] font-semibold">Hedef Kitle</p>
+              <p className="text-sm font-bold text-[#1B1B1B]">5–6 Yaş Okul Öncesi</p>
+            </div>
+            <div>
+              <p className="text-xs text-[#8297A6] font-semibold">Proje Danışmanı</p>
+              <p className="text-sm font-bold text-[#1B1B1B]">Öğr. Gör. Nur Erdem</p>
+            </div>
+            <div>
+              <p className="text-xs text-[#8297A6] font-semibold">Hata Belirleme Başarısı</p>
+              <p className="text-sm font-bold text-[#800020]">%75 (2. Denemede)</p>
+            </div>
+            <div>
+              <p className="text-xs text-[#8297A6] font-semibold">İletişim & Sabır Kazanımı</p>
+              <p className="text-sm font-bold text-[#800020]">%90 Rol Geçişinde</p>
+            </div>
+          </div>
+
+          <div className="text-xs text-[#5A5047] border-t border-[#E6E0D8] pt-4">
+            <strong>Proje Ekibi:</strong> Gamze Susam, Cansu Taşdemir, Kübra Önaybırak, Cansu Akkaya
           </div>
         </div>
       </section>
 
-      <footer className="text-center text-[#800020]/60 text-sm py-10 bg-[#FFF9F2]">
-        © 2026 Gamze Susam. Tüm hakları saklıdır.
+      {/* 7. İLETİŞİM & FOOTER */}
+      <footer id="iletisim" className="max-w-4xl mx-auto px-6 py-12 border-t border-[#E6E0D8] flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#5A5047]">
+        <p>© 2026 Gamze Susam. Tüm hakları saklıdır.</p>
+        <div className="flex gap-6">
+          <a
+            href="https://github.com/gamzesusam"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#800020] transition font-medium"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#800020] transition font-medium"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="mailto:gamze.serra3@gmail.com"
+            className="hover:text-[#800020] transition font-medium"
+          >
+            E-Posta
+          </a>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }
