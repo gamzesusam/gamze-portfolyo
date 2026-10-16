@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gamze Susam",
+  title: "Gamze Susam | Portfolyo",
   description: "Gamze Susam Portfolyo",
 };
 
