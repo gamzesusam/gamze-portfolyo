@@ -241,7 +241,7 @@ export default function Home() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/gamze-susam-2897a1403/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#212A3E] transition font-medium"
@@ -249,7 +249,7 @@ export default function Home() {
             LinkedIn
           </a>
           <a
-            href="mailto:gamze.serra3@gmail.com"
+            href="mailto:gamzeesusam@gmail.com"
             className="hover:text-[#212A3E] transition font-medium"
           >
             E-Posta
