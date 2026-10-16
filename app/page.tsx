@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F1F6F9] text-[#212A3E] selection:bg-[#212A3E] selection:text-white">
-      {/* 1. ÜST NAVİGASYON */}
+      {}
       <header className="sticky top-0 z-50 backdrop-blur-md bg-[#F1F6F9]/90 border-b border-[#9BA4B5]/40 shadow-sm">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="font-bold text-lg text-[#212A3E] tracking-tight hover:opacity-80 transition">
@@ -19,7 +19,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* 2. GİRİŞ (HERO) */}
+      {}
       <section className="max-w-4xl mx-auto px-6 pt-24 pb-16 text-left">
         <span className="inline-block py-1 px-3 mb-6 text-xs font-semibold tracking-wider text-[#394867] uppercase bg-[#9BA4B5]/20 rounded-full border border-[#9BA4B5]/40">
           Büyük Veri Analistliği & Portfolyo
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. HAKKIMDA */}
+      {}
       <section id="hakkimda" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#9BA4B5]/40">
         <h2 className="text-2xl font-bold mb-6 text-[#212A3E]">Hakkımda.</h2>
         <div className="space-y-4 text-base md:text-lg leading-relaxed text-[#394867]">
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. EĞİTİM & STAJ */}
+      {}
       <section id="deneyim-egitim" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#9BA4B5]/40">
         <h2 className="text-2xl font-bold mb-8 text-[#212A3E]">Eğitim ve Deneyim Geçmişi</h2>
         <div className="space-y-6">
@@ -99,7 +99,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. GERÇEK PROJELER */}
+      {}
       <section id="projeler" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#9BA4B5]/40">
         <h2 className="text-2xl font-bold mb-8 text-[#212A3E]">Öne Çıkan Gerçek Projeler</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -130,7 +130,7 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Proje 2 */}
+          {}
           <div className="p-6 rounded-xl bg-white border border-[#9BA4B5]/40 shadow-sm flex flex-col justify-between hover:border-[#394867] transition">
             <div>
               <span className="text-xs font-semibold text-[#394867] uppercase">Makine Öğrenmesi (15.001 x 20)</span>
@@ -149,7 +149,7 @@ export default function Home() {
             <span className="text-xs font-semibold text-[#9BA4B5]">Araştırma & Modelleme Projesi</span>
           </div>
 
-          {/* Proje 3 */}
+          {}
           <div className="p-6 rounded-xl bg-white border border-[#9BA4B5]/40 shadow-sm flex flex-col justify-between hover:border-[#394867] transition">
             <div>
               <span className="text-xs font-semibold text-[#394867] uppercase">Sağlık Analitiği & Optimizasyon</span>
@@ -168,7 +168,7 @@ export default function Home() {
             <span className="text-xs font-semibold text-[#9BA4B5]">Ar-Ge & Kapasite Tahmini</span>
           </div>
 
-          {/* Proje 4 */}
+          {}
           <div className="p-6 rounded-xl bg-white border border-[#9BA4B5]/40 shadow-sm flex flex-col justify-between hover:border-[#394867] transition">
             <div>
               <span className="text-xs font-semibold text-[#394867] uppercase">Web Geliştirme Temelleri</span>
@@ -190,11 +190,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. SOSYAL SORUMLULUK */}
+      {}
       <section id="sosyal-sorumluluk" className="max-w-4xl mx-auto px-6 py-16 border-t border-[#9BA4B5]/40">
         <div className="p-8 rounded-2xl bg-white border border-[#9BA4B5]/40 shadow-sm">
           <span className="text-xs font-bold text-[#394867] uppercase tracking-wide">
-            MCBÜ Sosyal Sorumluluk Projeleri Sergisi (2025–2026 Bahar)
+            MCBÜ Sosyal Sorumluluk Projeleri Sergisi (2026 Bahar)
           </span>
           <h2 className="text-2xl font-bold text-[#212A3E] mt-2 mb-4">
             Dijital Çağdan Önce Oyunlar: Çocuklar İçin Eğitici Atölye
@@ -228,7 +228,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. İLETİŞİM & FOOTER */}
+      {}
       <footer id="iletisim" className="max-w-4xl mx-auto px-6 py-12 border-t border-[#9BA4B5]/40 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#394867]">
         <p>© 2026 Gamze Susam. Tüm hakları saklıdır.</p>
         <div className="flex gap-6">
